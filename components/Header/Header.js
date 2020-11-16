@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
@@ -9,10 +9,30 @@ import styles from './Header.module.css'
 
 function Header () {
 
+    const [isSticky, setSticky] = useState(true);
+
+    const handleScroll = () => {
+        console.log(window.pageYOffset )
+        if (window.pageYOffset > 140) { 
+              setSticky(false)   
+        }
+        else{
+            setSticky(true)
+        }
+    } 
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll); 
+      return () => {
+        window.removeEventListener('scroll', () => handleScroll);
+      };
+    }, []);
+
     const router = useRouter();
     return(
-
-        <Navbar bg="tranparent" expand="lg" className='border-bottom '>
+        
+        <Navbar bg="tranparent" expand="lg" className={isSticky ? "position-static" : "fixed-top"}>
+           
                 <Link href='/'>
                     <Navbar.Brand href="/">Vitor </Navbar.Brand>
                 </Link>

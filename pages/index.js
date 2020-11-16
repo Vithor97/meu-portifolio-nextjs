@@ -1,5 +1,7 @@
 
 import Hero from '../components/Hero/Hero.js'
+import Carousel from '../components/Card/Carousel.js'
+import MyImage from '../components/myImage'
 
 export default function Home() {
 
@@ -9,8 +11,14 @@ export default function Home() {
     text: 'meus projetos abaixo'
     
   }
-
   return (
-   <Hero title={info.title} subTitle={info.subTitle} text={info.text}/>
+
+    <div>
+      <Hero title={info.title} subTitle={info.subTitle} text={info.text}/>
+      <Carousel/>
+    </div>
+   
+
+  
   )
 }

@@ -14,3 +14,46 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.g-card {
+  margin: 20px;
+}
+
+
+.g-card-image {
+  border-radius: 10px;
+  width: 280px;
+  height: 440px;
+  box-shadow: 0px 0px 3px 1px #ccc;
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.g-card-image:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+
+.g-card-info {
+  margin-top: 20px;
+  min-height: 100px;
+}
+
+
+.g-card-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+
+.g-card-sub-title {
+  font-size: 16px;
+  margin: 0px;
+}
+.aboutContainer {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
