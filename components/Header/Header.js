@@ -31,10 +31,9 @@ function Header () {
     const router = useRouter();
     return(
         
-        <Navbar bg="tranparent" expand="lg" className={isSticky ? "position-static" : "fixed-top"}>
-           
+        <Navbar bg="tranparent" expand="lg" style={{backgroundColor:'#DCDCDC '}} className={isSticky ? "position-static" : "fixed-top"}>
                 <Link href='/'>
-                    <Navbar.Brand href="/">Vitor </Navbar.Brand>
+                    <Navbar.Brand href="/">Vitor</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
                 <Navbar.Collapse id="navbar-toggle">
@@ -43,10 +42,10 @@ function Header () {
                         <Nav.Link href="/">Home</Nav.Link>
                     </Link>
                     <Link href="/about">
-                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="/about">Sobre</Nav.Link>
                     </Link>
                     <Link href="/contact">
-                        <Nav.Link href="/contact">Contact</Nav.Link>
+                        <Nav.Link href="/contact">Contato</Nav.Link>
                     </Link>
                     
                     </Nav>

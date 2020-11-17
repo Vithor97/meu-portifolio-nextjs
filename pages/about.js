@@ -7,14 +7,14 @@ function About() {
   const firebase = './images/firebaseLogo.png'
   const java = './images/java-logo.png'
     return( 
-      <Container fluid={true}  className="aboutContainer " style={{backgroundColor: '#E7E5DD '}}> 
+      <Container fluid={true}  className="aboutContainer " style={{backgroundColor: '#F9F9F9 '}}> 
       <Row>
         <Col sm={4} className="d-flex justify-content-center">
           <Image style={{height: '500px', width: '300px', padding: '10px', paddingTop: '15px'}}  src="/images/profile.jpg" rounded fluid/>
         </Col>
 
         <Col  sm={8}>
-                  <h1 className="border-bottom border-dark d-flex justify-content-center">Aboute me</h1>
+                  <h1 className="border-bottom border-dark d-flex justify-content-center">Sobre mim</h1>
                   <p>Olá, meu nome é vitor. Sou um desenvolvedor de sistemas, graduado em Análise e Desenvolvimento de Sistemas pela Fatec Carapicuíba.</p>
 
 <p>Estou sempre curioso aprendendo novas tecnologias. Atualmente aumentando os conhecimentos em React, Angular,  NextJS e NodeJS.</p>

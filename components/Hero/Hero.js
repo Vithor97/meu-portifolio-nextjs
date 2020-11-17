@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Container, Row , Image} from 'react-bootstrap'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 export default function Hero(props) {
     return (
@@ -16,14 +17,16 @@ export default function Hero(props) {
                 <p className="lead font-weight-light display-8">Software Developer</p>
 
                 <p>
-                    <a href="#contato" className="btn btn-dark my-2">Contato</a>
+                    <Link href="/contact">
+                        <a href="/contact" className="btn btn-dark my-2">Contato</a>
+                    </Link>
                 </p>
                 <div className="justfy-content-center py-5">
                     <a className="mr-2" href="https://github.com/Vithor97" target="_blank">
-                        <FontAwesomeIcon icon={['fab', 'github']} size="lg" color="black"/>
+                        <FontAwesomeIcon icon={['fab', 'github']} size={"2x"} color="black"/>
                     </a>
                     <a href="https://www.linkedin.com/in/vitor-santos-de-miranda-3a68ba124/" target="_blank">
-                        <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" color="#2867B2"/>
+                        <FontAwesomeIcon icon={['fab', 'linkedin']} size={"2x"} color="#2867B2"/>
                     </a>
                 </div>  
             </div>

@@ -6,9 +6,9 @@ import MyImage from '../components/myImage'
 export default function Home() {
 
   const info ={
-    title: 'Be Relentless',
-    subTitle: 'Project the make a difference',
-    text: 'meus projetos abaixo'
+    title: 'Projetos',
+    subTitle: '',
+    text: 'Alguns projetos abaixo: '
     
   }
   return (

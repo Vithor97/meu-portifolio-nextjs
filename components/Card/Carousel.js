@@ -1,39 +1,36 @@
 import React, {useState} from 'react'
 import { Col, Container, Row , Image, Crd, Button} from 'react-bootstrap'
 import Card from './Card'
-// import devgrub from '/devgrub.png'
-// import evverest from '/evverest.png'
-// import youtube from '/youtube.png'
 
 function Carousel() {
 
-    const devgrub = './images/devgrub.png'
-    const evverest = './images/evverest.png'
-    const youtube = './images/youtube.png'
+    const airbnband = './images/airbnband.png'
+    const whatsClone = './images/whatsClone.png'
+    const alurapic = './images/alurapic.png'
 
     const [itens, setItens] = useState([
         {
             id: 0,
-            title: 'Dev Grub',
-            subTitle: 'The cookbook for developers',
-            imgSrc: devgrub,
-            link: 'https://devgrub.com',
+            title: 'AirBnBand - React e Firebase',
+            subTitle: 'App para contratação de atrações musicais',
+            imgSrc: airbnband,
+            link: 'https://github.com/Vithor97/AirBnBand',
             selected: false
         },
         {
             id: 1,
-            title: 'Garrett Love',
-            subTitle: 'YouTube channel',
-            imgSrc: youtube,
-            link: 'https://www.youtube.com/channel/UCxSITxL2JbF229OGCqieVZw',
+            title: 'WhatsApp Clone',
+            subTitle: 'Clone do Whatsapp WEB feito em react',
+            imgSrc: whatsClone,
+            link: 'https://github.com/Vithor97/whatsappClone-react',
             selected: false
         },
         {
             id: 2,
-            title: 'Evverest',
-            subTitle: 'A social network for developers',
-            imgSrc: evverest,
-            link: 'https://github.com/garrettlove8/evverest',
+            title: 'AluraPic',
+            subTitle: 'Projeto em angular - Cópia do instagram',
+            imgSrc: alurapic,
+            link: 'https://github.com/Vithor97/AluraPic',
             selected: false
         },
 

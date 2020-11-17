@@ -24,8 +24,8 @@ const transporter = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: "a6bb5619ee5fdf",
-    pass: "8b6f34d0083ac4"
+    user: process.env.NEXT_PUBLIC_USER,
+    pass: process.env.NEXT_PUBLIC_PASS
   }
 })
 
@@ -40,7 +40,7 @@ export default async (req, res) => {
   else{
     await transporter.sendMail({
       from: emaill, // sender address
-      to: ["airbnbands@gmail.com", "joevitevile@outlook.com"], // list of receivers
+      to: ["airbnbands@gmail.com"], // list of receivers
       subject: nome, // Subject line
       text: message, // plain text body, // html body
     },(err, data) =>{
