@@ -1,7 +1,7 @@
 
 import Hero from '../components/Hero/Hero.js'
 import Carousel from '../components/Card/Carousel.js'
-import MyImage from '../components/myImage'
+
 
 export default function Home() {
 
