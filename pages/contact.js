@@ -19,7 +19,7 @@ function contact() {
 
         try {
             const result =  await axios.post('/api/server', { nome: nome, emaill: email, message: message });
-            console.log(result)
+
             if(result.status === 200){
                 setEmailSent(true)
                 setStatus(result.status)

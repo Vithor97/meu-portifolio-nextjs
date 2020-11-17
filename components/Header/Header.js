@@ -5,14 +5,12 @@ import { useRouter } from "next/router";
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
-import styles from './Header.module.css'
-
 function Header () {
 
     const [isSticky, setSticky] = useState(true);
 
     const handleScroll = () => {
-        console.log(window.pageYOffset )
+  
         if (window.pageYOffset > 140) { 
               setSticky(false)   
         }
