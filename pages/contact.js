@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import {Container, Form, Button} from 'react-bootstrap'
-
+import {Container, Form, Button ,Alert} from 'react-bootstrap'
+import axios from 'axios'
 
 function contact() {
 
@@ -9,29 +9,43 @@ function contact() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
-    const  handleChange = (event) => {
-      const target = event.target;
-      const value = target.type === 'checkbox' ? target.checked : target.value;
-      const name = target.name;
+    const [emailSent, setEmailSent] = useState(false)
 
-      this.setState({
-          [name]: value
-      })
-  }
-    const handleSubmit = (event) =>{
+    const [status, setStatus] = useState(0)
+
+   const handleSubmit =  async (event) =>{
       event.preventDefault();
 
-      console.log(event.target)
 
-      console.log(`
-        Email: ${email},
-        Nome: ${nome}
-        Menssagem: ${message}
-      `)
+        try {
+            const result =  await axios.post('/api/server', { nome: nome, emaill: email, message: message });
+            console.log(result)
+            if(result.status === 200){
+                setEmailSent(true)
+                setStatus(result.status)
+                setNome('')
+                setEmail('')
+                setMessage('')
+                setTimeout(()=> {
+                    setEmailSent(false)
+                }, 5000)
+            }
+        } 
+        catch (e) {
+            if (e.response.status === 400) {
+                    // .      setEmailSent(false)
+                setStatus(e.response.status)
+                setTimeout(()=> {
+                setStatus(0)
+                }, 5000)
+            } 
+            
+        }
+
     }
     return (
       <div>
-                <h1 className="border-dark d-flex justify-content-center mb-3">Contato</h1>
+                <h1 className="border-dark d-flex justify-content-center mb-2">Contato</h1>
                 <Container className="" style={{paddingBottom: '200px'}}>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group>
@@ -52,14 +66,14 @@ function contact() {
                         </Form.Group>
 
 
-                        <Button className="d-inline-block" variant="primary" type="submit">
+                        <Button className="d-inline-block mb-2" variant="primary" type="submit">
                             Send
                         </Button>
 
-
-                        {/* {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-                        {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>} */}
                     </Form>
+                    
+                    {emailSent === true && status === 200 && <Alert  variant="success">Email enviado com sucesso</Alert>}
+                    {emailSent === false && status > 200 && <Alert  variant="danger">Email não enviado</Alert>}
                 </Container>
             </div>
     )
