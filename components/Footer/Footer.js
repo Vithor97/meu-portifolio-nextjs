@@ -9,7 +9,7 @@ function Footer() {
 
 
     return (
-        <footer className="position-static" style={{backgroundColor: '#333'}}>
+        <footer className="position-static footerComp" style={{backgroundColor: '#333'}}>
             <Container fluid={true}>
                 <Row className="border-top justify-content-center p-3">
                     <Col className="">

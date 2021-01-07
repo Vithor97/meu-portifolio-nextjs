@@ -7,7 +7,7 @@ function About() {
   const firebase = './images/firebaseLogo.png'
   const java = './images/java-logo.png'
     return( 
-      <Container fluid={true}  className="aboutContainer " style={{backgroundColor: '#F9F9F9 '}}> 
+      <Container fluid={true}  className="aboutContainer" style={{backgroundColor: '#F9F9F9 '}}> 
       <Row>
         <Col sm={4} className="d-flex justify-content-center">
           <Image style={{height: '500px', width: '300px', padding: '10px', paddingTop: '15px'}}  src="/images/profile.jpg" rounded fluid/>

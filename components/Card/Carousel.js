@@ -59,7 +59,7 @@ function Carousel() {
     }
 
     return (
-        <Container fluid={true}>
+        <Container fluid={true} className="container">
             <Row className="justify-content-around pb-5">
                 {makeItems(itens)}
                {/* {itens.map(item =>{

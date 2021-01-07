@@ -44,9 +44,9 @@ function contact() {
 
     }
     return (
-      <div> 
+      <div className="contactContainer"> 
                 <h1 className="border-dark d-flex justify-content-center mb-2">Contato</h1>
-                <Container className="" style={{paddingBottom: '200px'}}>
+                <Container>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Nome Completo</Form.Label>

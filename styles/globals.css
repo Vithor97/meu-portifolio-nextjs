@@ -55,6 +55,24 @@ a {
 }
 .aboutContainer {
   padding-top: 10vh;
-  padding-bottom: 10vh;
+  min-height: 88vh;
+
+}
+
+.contactContainer {
+  padding-top: 70px;
+  height: 100vh;
+
+}
+
+.container{
+  min-height: 88vh;
+}
+
+
+.footerComp {
+  position: relative;
+  bottom:0;
+  width: 100%;
 }
 
