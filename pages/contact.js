@@ -44,9 +44,8 @@ function contact() {
 
     }
     return (
-      <div className="contactContainer"> 
-                <h1 className="border-dark d-flex justify-content-center mb-2">Contato</h1>
-                <Container>
+                <Container className="contactContainer">
+                <h1 className="border-dark d-flex justify-content-center mb-3 mt-5">Contato</h1>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Nome Completo</Form.Label>
@@ -75,7 +74,6 @@ function contact() {
                     {emailSent === true && status === 200 && <Alert  variant="success">Email enviado com sucesso</Alert>}
                     {emailSent === false && status > 200 && <Alert  variant="danger">Email não enviado</Alert>}
                 </Container>
-            </div>
     )
   }
   
