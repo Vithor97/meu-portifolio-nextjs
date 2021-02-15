@@ -18,7 +18,7 @@ export default function Hero(props) {
 
                 <p>
                     <Link href="/contact">
-                        <a href="/contact" className="btn btn-dark my-2">Contato</a>
+                        <a href="/contact" className="btn btn-dark my-2 font-weight-bold">Contato</a>
                     </Link>
                 </p>
                 <div className="justfy-content-center py-5">
