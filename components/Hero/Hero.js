@@ -11,7 +11,7 @@ export default function Hero(props) {
             
         <section className="text-center border-bottom pt-5">
             <div >
-                <Image style={{width: '322px', height:'322px', objectFit:'fill'}} src="https://media-exp1.licdn.com/dms/image/C4D03AQF1LN-b7Zyv6Q/profile-displayphoto-shrink_200_200/0/1581212728766?e=1617235200&v=beta&t=bTPX1gTjj5AqvHBq5Bhwvs-N0NkgSkdInFwvaWxhB4U" roundedCircle thumbnail/>
+                <Image style={{width: '300px', height:'300px', objectFit:'contain'}} src="/images/profile2.jpg" roundedCircle thumbnail/>
                 <h1 className="display-5 font-weight-bolder">Vitor Miranda</h1>
 
                 <p className="lead font-weight-light display-8">Software Developer</p>
